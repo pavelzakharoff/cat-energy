@@ -1,0 +1,23 @@
+.map {
+  position: relative;
+
+  @include mobile {
+    height: 362px;
+  }
+
+  @include tablet {
+    height: 400px;
+  }
+
+  &__view {
+    width: 100%;
+
+    @include mobile {
+      height: 362px;
+    }
+
+    @include tablet {
+      height: 400px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: $text-white;
+  border: none;
+  background: $bg-green;
+  text-transform: uppercase;
+  @include fluid-text(20, 16);
+  @include font-oswald(400);
+}

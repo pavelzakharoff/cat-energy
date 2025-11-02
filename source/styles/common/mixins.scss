@@ -1,0 +1,40 @@
+@use "sass:math";
+
+@mixin font-lato($weight: 400, $size: null) {
+  font-family: "Lato", sans-serif;
+  font-weight: $weight;
+  @if $size { font-size: $size; }
+}
+
+@mixin font-oswald($weight: 400, $size: null) {
+  font-family: "Oswald", sans-serif;
+  font-weight: $weight;
+  text-transform: uppercase;
+  @if $size { font-size: $size; }
+}
+
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px, #{math.div($max, 1440) * 100}vw, #{$max}px);
+}
+
+$mobile: 767px;
+$tablet: 768px;
+$desktop: 1440px;
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}

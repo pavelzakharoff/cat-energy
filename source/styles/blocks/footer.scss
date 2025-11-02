@@ -1,0 +1,93 @@
+.footer {
+
+  &__container {
+
+    @include mobile {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    @include tablet {
+      padding-top: 55px;
+      padding-bottom: 55px;
+    }
+
+    @include desktop {
+      padding-top: 66px;
+      padding-bottom: 66px;
+    }
+
+  }
+
+  &__nav {
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    @include tablet {
+      justify-content: space-between;
+    }
+  }
+
+  &__nav-logo {
+    position: relative;
+
+    @include mobile {
+      &::after {
+        content: "";
+        background-color: #d9d9d9;
+        width: 280px;
+        height: 1px;
+        position: absolute;
+        top: 175%;
+        right: -74px;
+        bottom: -14%;
+        transform: translateY(-50%);
+      }
+    }
+
+  }
+
+  &__social {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include mobile {
+
+      &::after {
+        content: "";
+        background-color: #d9d9d9;
+        width: 280px;
+        height: 1px;
+        position: absolute;
+        top: 200%;
+        right: -74px;
+        bottom: -14%;
+        transform: translateY(-50%);
+      }
+    }
+
+  }
+
+
+
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    @include tablet {
+      gap: 23px;
+    }
+  }
+}
