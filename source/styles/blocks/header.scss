@@ -1,5 +1,74 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+
+  @include mobile {
+    padding-top: 13px;
+    padding-bottom: 14px;
+    position: relative;
+  }
+
+  @include desktop {
+    padding-top: 25px;
+
+    &::after {
+      content: "";
+      z-index: -1;
+      background-color: #68B738D9;
+      width: 50%;
+      height: 694px;
+      position: absolute;
+      right: 0;
+      top: -55px;
+    }
+  }
+
+
+  @include tablet {
+    padding-top: 25px;
+  }
+
+  @include desktop {
+    padding-top: 55px;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+
+    }
+
+  }
+
+  &__logo {
+    display: flex;
+    gap: 56px;
+    align-items: center;
+
+    @include tablet {
+      gap: 13px;
+    }
+
+    @include desktop {
+      gap: 14px;
+    }
+  }
+
+
+
+
+
+  &__burger {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 30px;
+    justify-content: center;
+  }
 }

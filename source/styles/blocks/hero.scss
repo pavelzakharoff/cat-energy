@@ -1,0 +1,147 @@
+.hero {
+  @include mobile {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #68B738D9;
+      width: 100%;
+      height: 302px;
+      z-index: -1;
+    }
+  }
+
+  @include tablet {
+    margin-top: 65px;
+  }
+
+  @include desktop {
+    margin-top: 32px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      position: relative;
+      align-items: flex-start;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+    padding-top: 27px;
+
+    @include tablet {
+      padding-top: 0;
+      padding-left: 90px;
+      order: 1;
+      text-align: left;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    @include desktop {
+      padding-top: 81px;
+    }
+  }
+
+  &__title {
+    font-family: "Oswald", sans-serif;
+    color: #FFF;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+
+    @include tablet {
+      color: $text-black;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 60px;
+      font-family: "Oswald", sans-serif;
+      text-align: start;
+    }
+
+
+  }
+
+  &__subtitle {
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: $text-white;
+
+    @include tablet {
+      color: $text-black;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+  }
+
+  &__button {
+    margin-top: 3px;
+    display: flex;
+    width: 280px;
+    height: 40px;
+    padding: 10px 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+
+    @include tablet {
+      display: flex;
+      padding: 14px 26px;
+      order: 2;
+      width: auto;
+      align-self: flex-start;
+      margin-top: 50px;
+      margin-left: 90px;
+    }
+
+    @include desktop {
+      padding: 14px 26px;
+    }
+  }
+
+  &__image {
+    margin-top: 29px;
+
+    @include tablet {
+      position: relative;
+      order: 3; // Изображение будет вторым
+      margin-top: -70px;
+      z-index: -1;
+      align-self: flex-end;
+      margin-left: auto;
+      margin-right: 0;
+      right: 33px;
+    }
+
+    @include desktop {
+      z-index: -1;
+      order: 3;
+      align-self: flex-end;
+      margin-top: -357px;
+      margin-left: 31px;
+      margin-right: 220px;
+      position: relative;
+      right: 0;
+    }
+
+  }
+}

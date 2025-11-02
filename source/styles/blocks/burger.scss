@@ -1,0 +1,14 @@
+.burger {
+
+  @include tablet {
+    display: none;
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000000; // черные линии
+    transition: all 0.3s ease;
+  }
+}

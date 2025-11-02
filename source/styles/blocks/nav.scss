@@ -1,0 +1,76 @@
+.nav {
+  @include mobile {
+    display: none;
+  }
+
+  &__menu-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 33px;
+
+    @include tablet {
+      margin-top: 14px;
+    }
+
+    @include  desktop {
+      margin-top: 16px;
+    }
+  }
+
+  &__menu-item {
+
+    @include tablet {
+      padding-bottom: 12px;
+    }
+
+    @include desktop {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__menu-link {
+
+    position: relative;
+    @include tablet {
+      font-family: "Oswald", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $text-black;
+    }
+
+    @include desktop {
+      font-size: 20px;
+      color: $text-white;
+    }
+  }
+
+  &__menu-current {
+
+    @include tablet {
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        background-color: #68b738;
+      }
+    }
+
+    @include desktop {
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        background-color: $bg-white;
+      }
+    }
+  }
+}

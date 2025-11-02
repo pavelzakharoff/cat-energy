@@ -1,0 +1,63 @@
+.cat {
+
+  &__comparison {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  &__images {
+    display: flex;
+  }
+
+  &__image {
+  }
+
+  &__slider-handle {
+    display: flex;
+    width: 4px;
+    height: 256px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+
+  }
+
+  &__line {
+    border-radius: 2px;
+    position: absolute;
+    background: #666;
+    width: 256px;
+    height: 4px;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center center; /* явно указываем точку вращения */
+
+    @include tablet {
+      width: 512px;
+      top: 100%;
+    }
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border-radius:  50%;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 3;
+
+    @include tablet {
+      top: 90%;
+    }
+  }
+
+}
